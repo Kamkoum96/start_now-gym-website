@@ -1,0 +1,437 @@
+<?php
+require_once('config.php');
+?>
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Start NOW</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="TIC-E" />
+
+	<link rel="icon" href="../images/icon.ico">
+
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="../sweetalert2.min.css">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="../css/animate.css">
+	<!-- Icon Fonts-->
+	<link rel="stylesheet" href="../css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<!-- style  -->
+	<link rel="stylesheet" href="../css/style.css">
+
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+
+	</head>
+	
+	<body>
+
+	<div class="fh5co-loader"></div>
+
+	<div id="page">
+
+
+
+	<!-- top -->
+ 	<nav class="fh5co-nav" role="navigation">
+ 		<div class="topp">
+ 			<!-- <div class="container"> -->
+ 				<!-- <div class="row"> -->
+ 					<div class="col-xs-12 text-right">
+ 					<style>
+							#btn1 {
+								  background-color: #4CAF50;
+								  color: white;
+								  padding: 8px 10px;
+								  margin: 10px 5px;
+								  border: none;
+								  cursor: pointer;
+								  width: 100%;
+								  border-radius:5px;
+								  padding-right: 20px;
+						  	      margin-right: 100px;
+							}
+							#btn2 {
+								  background-color: #ffffff;
+								  color: white;
+								  padding: 8px 10px;
+								  margin: 10px 5px;
+								  border: none;
+								  cursor: pointer;
+								  width: 100%;
+								  color: #000000;
+								  border-radius:5px;
+								  margin-right: 10px;
+							}
+							.topp {
+								background: #F85A16;
+								margin-bottom: 0;
+								background: #F85A16;
+								padding: 10px 30px;
+								height: 52px;
+							}
+						</style>
+						<p class="num" style="
+					  	          font-size: 13px;
+						  	      padding-right: 20px;
+						  	      margin-right: 10px;
+							  	  display: -moz-inline-stack;
+								  display: inline-block;
+								  zoom: 1;
+								  *display: inline;
+								  border-right: 1px solid rgba(255, 255, 255, 0.2);
+								  letter-spacing: 0px;
+								  color: rgba(255, 255, 255, 0.7);">Phone : (+216) 55 614 886</p>
+						<?php
+							session_start();
+							if(isset( $_SESSION['User']))
+							{
+							?>
+						      <span id="btn2">
+							  <?php
+							  echo '<a href="logout.php?logout  ">Logout</a>';
+							  }
+							  ?>
+							  </span>
+							  <span id="btn1">
+							  <?php
+							  echo 'Welcome ' . $_SESSION['User'];
+							  ?>
+							  </span>
+							  
+						
+						<!-- echo '<a class="button3 " style="width:auto;" href="logout.php?logout  ">Logout</a>'; -->
+ 					</div>
+ 					
+ 				<!-- </div> -->
+ 			<!-- </div> -->
+ 		</div>
+ 		<div class="top-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-2">
+						<a href="index2.php"><img src="../images/logo.png"></a>
+					</div>
+					<div class="col-xs-10 text-right menu-1">
+						<ul>
+							<li><a href="index2.php">Home</a></li>
+							<li><a href="gallery.php">Gallery</a></li>
+							<li  class="has-dropdown">
+								<a href="about.php">Trainer</a>
+								<ul class="dropdown">
+									<li><a href="trainer1.php">Canelo Alvarez</a></li>
+									<li><a href="trainer2.php">Hany Rambod</a></li>
+									<li><a href="trainer3.php">Pilin Anice</a></li>
+									<li><a href="trainer4.php">Bret Contreras</a></li>
+								</ul>
+							</li>
+							<li><a href="pricing.php">Pricing</a></li>
+							<li  class="active has-dropdown">
+								<a href="training.php">Training</a>
+								<ul class="dropdown">
+									<li class="active"><a href="Weight_lifting.php">Weight lifting</a></li>
+									<li><a href="running.php">Running</a></li>
+									<li><a href="yoga.php">Yoga</a></li>
+									<li><a href="boxing.php">Boxing</a></li>
+									<li><a href="Cadio.php">Cardio</a></li>
+								</ul>
+							</li>
+							<li><a href="equipment.php">Equipment</a></li>
+							<li><a href="contact.php">Contact</a></li>
+						</ul>
+					</div>
+					</div>
+
+
+			</div>
+		</div>
+ 	</nav>
+ 	<!-- top -->
+
+
+
+
+
+	<!-- header -->
+	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(../images/wl3.jpg);" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<div class="display-t">
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+							<h1>Some are born strong and others are made strong</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- header -->
+
+
+
+
+
+	<!-- Training -->
+	<div id="fh5co-services" class="fh5co-bg-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 text-center animate-box">
+					<div class="services">
+						<span><img class="img-responsive" src="../images/cardio.svg" alt=""></span>
+						<h3>Cardio</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus veritatis modi animi fugiat similique porro, nostrum dolores maxime!</p>
+						<p><a href="Cadio.php" class="btn btn-primary btn-outline btn-sm">More <i class="icon-arrow-right"></i></a></p>
+					</div>
+				</div>
+				<div class="col-md-3 text-center animate-box">
+					<div class="services">
+						<span><img class="img-responsive" src="../images/two-boxing-gloves.svg" alt=""></span>
+						<h3>Boxing</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis temporibus adipisci reiciendis.</p>
+						<br>
+						<p><a href="boxing.php" class="btn btn-primary btn-outline btn-sm">More <i class="icon-arrow-right"></i></a></p>
+					</div>
+				</div>
+				<div class="col-md-3 text-center animate-box">
+					<div class="services">
+						<span><img class="img-responsive" src="../images/yoga-carpet.svg" alt=""></span>
+						<h3>Yoga</h3>
+						<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius</p>
+						<p><a href="yoga.php" class="btn btn-primary btn-outline btn-sm">More <i class="icon-arrow-right"></i></a></p>
+					</div>
+				</div>
+				<div class="col-md-3 text-center animate-box">
+					<div class="services">
+						<span><img class="img-responsive" src="../images/exercise.svg" alt=""></span>
+						<h3>Runnig</h3>
+						<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius</p>
+						<p><a href="yoga.php" class="btn btn-primary btn-outline btn-sm">More <i class="icon-arrow-right"></i></a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Training -->
+
+	<div><br><br><br></div>
+
+
+
+	<div class="container-fluid gtco-feature" id="services">
+    <div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<div class="cover">
+						<div class="card">
+							<svg
+									class="back-bg"
+									width="100%" viewBox="0 0 900 700" style="position:absolute; z-index: -1">
+								<defs>
+									<linearGradient id="PSgrad_01" x1="64.279%" x2="0%" y1="76.604%" y2="0%">
+										<stop offset="10%" stop-color="rgb(233,78,27)" stop-opacity="1"/>
+									</linearGradient>
+								</defs>
+								<path fill-rule="evenodd" opacity="0.102" fill="url(#PSgrad_01)"
+									  d="M616.656,2.494 L89.351,98.948 C19.867,111.658 -16.508,176.639 7.408,240.130 L122.755,546.348 C141.761,596.806 203.597,623.407 259.843,609.597 L697.535,502.126 C748.221,489.680 783.967,441.432 777.751,392.742 L739.837,95.775 C732.096,35.145 677.715,-8.675 616.656,2.494 Z"/>
+							</svg>
+							<!-- *************-->
+
+							<svg width="100%" viewBox="0 0 700 500">
+								<clipPath id="clip-path">
+									<path d="M89.479,0.180 L512.635,25.932 C568.395,29.326 603.115,76.927 590.357,129.078 L528.827,380.603 C518.688,422.048 472.661,448.814 427.190,443.300 L73.350,400.391 C32.374,395.422 -0.267,360.907 -0.002,322.064 L1.609,85.154 C1.938,36.786 40.481,-2.801 89.479,0.180 Z"></path>
+								</clipPath>
+								<!-- xlink:href for modern browsers, src for IE8- -->
+								<image clip-path="url(#clip-path)" xlink:href="../images/wl4.jpg" width="100%"
+									   height="465" class="svg__image"></image>
+							</svg>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<h2> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus. </h2>
+					<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rhoncus turpis nisl, vitae dictum mi
+						semper convallis. Ut sapien leo, varius ac dapibus a, cursus quis ante. </p>
+					<p>
+						<small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati totam quam, sed sunt, nulla modi. Doloribus nam, recusandae reiciendis distinctio!
+						</small>
+					</p>
+					<a href="#">Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+			</div>
+		</div>
+	</div>
+
+	<div><br><br></div>
+
+	<div class="container-fluid gtco-feature" id="services">
+    <div class="container">
+			<div class="row">
+				<div class="col-md-7">
+					<h2> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, aut. </h2>
+					<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam autem deserunt vel magni quam ipsum, adipisci, at officia, quod rem quas, ad necessitatibus sapiente repellendus. </p>
+					<p>
+						<small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quam sapiente beatae, pariatur inventore nobis. Nemo eveniet molestiae eius, aspernatur minima numquam illo!
+						</small>
+					</p>
+					<a href="#">Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+				</div>
+				<div class="col-md-5">
+					<div class="cover">
+						<div class="card">
+							<svg
+									class="back-bg"
+									width="100%" viewBox="0 0 900 700" style="position:absolute; z-index: -1">
+								<defs>
+									<linearGradient id="PSgrad_01" x1="64.279%" x2="0%" y1="76.604%" y2="0%">
+										<stop offset="10%" stop-color="rgb(233,78,27)" stop-opacity="1"/>
+									</linearGradient>
+								</defs>
+								<path fill-rule="evenodd" opacity="0.102" fill="url(#PSgrad_01)"
+									  d="M616.656,2.494 L89.351,98.948 C19.867,111.658 -16.508,176.639 7.408,240.130 L122.755,546.348 C141.761,596.806 203.597,623.407 259.843,609.597 L697.535,502.126 C748.221,489.680 783.967,441.432 777.751,392.742 L739.837,95.775 C732.096,35.145 677.715,-8.675 616.656,2.494 Z"/>
+							</svg>
+							<!-- *************-->
+
+							<svg width="100%" viewBox="0 0 700 500">
+								<clipPath id="clip-path">
+									<path d="M89.479,0.180 L512.635,25.932 C568.395,29.326 603.115,76.927 590.357,129.078 L528.827,380.603 C518.688,422.048 472.661,448.814 427.190,443.300 L73.350,400.391 C32.374,395.422 -0.267,360.907 -0.002,322.064 L1.609,85.154 C1.938,36.786 40.481,-2.801 89.479,0.180 Z"></path>
+								</clipPath>
+								<!-- xlink:href for modern browsers, src for IE8- -->
+								<image clip-path="url(#clip-path)" xlink:href="../images/wl6.jpg" width="100%"
+									   height="465" class="svg__image"></image>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div><br><br><br></div>
+
+
+	<!-- Discount -->
+	<div id="fh5co-started" class="fh5co-bg" style="background-image: url(../images/img_bg_3.jpg);">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<h2>Fitness Classes this Summer <br> <span> Pay Now and <br> Get <span class="percent">35%</span> Discount</span></h2>
+				</div>
+			</div>
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<p>		<button class="btn btn-primary" onclick="document.getElementById('id02').style.display='block'" style="width:auto;" name="member" >Become a Member</button>	</p>
+					<!-- <p><a href="#" class="btn btn-default btn-lg">Become a Member</a></p> -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Discount -->
+
+	<!-- Footer -->
+	<footer id="fh5co-footer" class="fh5co-bg" style="background-image: url(../images/footer.jpg); height: 400px" role="contentinfo">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-4 fh5co-widget">
+					<h3>A Little About Start NOW.</h3>
+					<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
+					<p>		<button class="btn btn-primary" onclick="document.getElementById('id02').style.display='block'" style="width:auto;" name="member" >Become a Member</button>	</p>
+				</div>
+				<div class="col-md-8">
+					<h3>Classes</h3>
+					<div class="col-md-4 col-sm-4 col-xs-6">
+						<ul class="fh5co-footer-links">
+							<li><a href="Cadio.php">Cardio</a></li>
+							<li><a href="Weight_lifting.php">Body Building</a></li>
+							<li><a href="yoga.php">Yoga</a></li>
+							<li><a href="boxing.php">Boxing</a></li>
+							<li><a href="running.php">Running</a></li>
+						</ul>
+					</div>
+
+					<div class="col-md-4 col-sm-4 col-xs-6">
+						<ul class="fh5co-footer-links">
+							<li><a href="boxing.php">Boxing</a></li>
+							<li><a href="#">Martial Arts</a></li>
+							<li><a href="#">Karate</a></li>
+							<li><a href="#">Kungfu</a></li>
+							<li><a href="#">Basketball</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-6">
+						<img src="../images/logo2.png" >
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+	<!-- Footer -->
+
+
+	</div>
+
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+
+
+
+	<script>
+		// Get the modal
+		var modal = document.getElementById('id01');
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+
+	<script type="text/javascript">
+		$(windows).on("scroll", function() {
+			if($(windows).scrollTop()){
+				$('nav').addClass('black');
+			}else{
+				$('nav').removeClass('black')
+			}
+		})
+	</script>
+
+
+
+	<!-- jQuery -->
+	<script src="../js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="../js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="../js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="../js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="../js/jquery.stellar.min.js"></script>
+	<!-- Carousel -->
+	<script src="../js/owl.carousel.min.js"></script>
+	<!-- countTo -->
+	<script src="../js/jquery.countTo.js"></script>
+	<!-- Magnific Popup -->
+	<script src="../js/jquery.magnific-popup.min.js"></script>
+	<script src="../js/magnific-popup-options.js"></script>
+	<!-- Main -->
+	<script src="../js/main.js"></script>
+
+
+	</body>
+</html>
